@@ -163,12 +163,39 @@ namespace FixT
             {
                 if (HasATeammate(CompetitorsList[i]))
                 {
-                    for (int j = 0; j < array.Length; j++)
+                    if (IsAside(CompetitorsList[i])==false && IsBside(CompetitorsList[i]) ==true)
                     {
-                        if (Qualifers[array[j]].name == null)
+                        for (int j = 0; j < array.Length; j++)
                         {
-                            Qualifers[array[j]] = CompetitorsList[i];
-                            break;
+                            if (Qualifers[array[j]].name == null)
+                            {
+                                Qualifers[array[j]] = CompetitorsList[i];
+                                break;
+                            }
+                            j++;
+                        }
+                    }
+                    else if (IsAside(CompetitorsList[i]) == true && IsBside(CompetitorsList[i]) == false)
+                    {
+                        for (int j = 1; j < array.Length; j++)
+                        {
+                            if (Qualifers[array[j]].name == null)
+                            {
+                                Qualifers[array[j]] = CompetitorsList[i];
+                                break;
+                            }
+                            j++;
+                        }
+                    }
+                    else
+                    {
+                        for (int j = 0; j < array.Length; j++)
+                        {
+                            if (Qualifers[array[j]].name == null)
+                            {
+                                Qualifers[array[j]] = CompetitorsList[i];
+                                break;
+                            }
                         }
                     }
                 }
