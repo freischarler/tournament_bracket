@@ -249,6 +249,27 @@ namespace FixT
                 //
             }
 
+            // Draw PODIUM
+            try
+            {
+                gfx.DrawString("1°  _________", t_font, XBrushes.Black,
+                new XRect(480, 120, page.Width, page.Height),
+                XStringFormats.TopLeft);
+
+                gfx.DrawString("2°  _________", t_font, XBrushes.Black,
+        new XRect(480, 140, page.Width, page.Height),
+        XStringFormats.TopLeft);
+
+                gfx.DrawString("3°  _________", t_font, XBrushes.Black,
+        new XRect(480, 160, page.Width, page.Height),
+        XStringFormats.TopLeft);
+            }
+            catch (Exception)
+            {
+                //
+            }
+
+
             if (c.Aside.Length == 1)
             {
                 int x = 170;
@@ -497,11 +518,6 @@ namespace FixT
             }
             else
                 txtWeight.Enabled = true;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         /*public Competitor[] AddList(string[,] data)

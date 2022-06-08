@@ -43,20 +43,20 @@ namespace FixT
             this.txtWeight = new System.Windows.Forms.NumericUpDown();
             this.ckAbs = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMat = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMat = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeight)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMat)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMat)).BeginInit();
             this.SuspendLayout();
             // 
             // Aside
@@ -64,7 +64,7 @@ namespace FixT
             this.Aside.FormattingEnabled = true;
             this.Aside.Location = new System.Drawing.Point(6, 19);
             this.Aside.Name = "Aside";
-            this.Aside.Size = new System.Drawing.Size(188, 251);
+            this.Aside.Size = new System.Drawing.Size(275, 251);
             this.Aside.TabIndex = 1;
             // 
             // Bside
@@ -72,14 +72,14 @@ namespace FixT
             this.Bside.FormattingEnabled = true;
             this.Bside.Location = new System.Drawing.Point(6, 16);
             this.Bside.Name = "Bside";
-            this.Bside.Size = new System.Drawing.Size(188, 251);
+            this.Bside.Size = new System.Drawing.Size(261, 251);
             this.Bside.TabIndex = 2;
             // 
             // cList
             // 
             this.cList.Location = new System.Drawing.Point(6, 19);
             this.cList.Name = "cList";
-            this.cList.Size = new System.Drawing.Size(188, 257);
+            this.cList.Size = new System.Drawing.Size(331, 257);
             this.cList.TabIndex = 4;
             this.cList.Text = "";
             // 
@@ -188,6 +188,28 @@ namespace FixT
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del torneo";
             // 
+            // txtMat
+            // 
+            this.txtMat.Location = new System.Drawing.Point(68, 153);
+            this.txtMat.Maximum = new decimal(new int[] {
+            150,
+            0,
+            0,
+            0});
+            this.txtMat.Name = "txtMat";
+            this.txtMat.Size = new System.Drawing.Size(126, 20);
+            this.txtMat.TabIndex = 20;
+            this.txtMat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "MAT n°";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -202,7 +224,7 @@ namespace FixT
             this.groupBox2.Controls.Add(this.cList);
             this.groupBox2.Location = new System.Drawing.Point(235, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 282);
+            this.groupBox2.Size = new System.Drawing.Size(346, 282);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Luchadores ( id , equipo )";
@@ -221,9 +243,9 @@ namespace FixT
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.Aside);
-            this.groupBox4.Location = new System.Drawing.Point(441, 12);
+            this.groupBox4.Location = new System.Drawing.Point(12, 300);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 282);
+            this.groupBox4.Size = new System.Drawing.Size(287, 282);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Lado A";
@@ -231,40 +253,18 @@ namespace FixT
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.Bside);
-            this.groupBox5.Location = new System.Drawing.Point(650, 12);
+            this.groupBox5.Location = new System.Drawing.Point(305, 300);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 282);
+            this.groupBox5.Size = new System.Drawing.Size(276, 282);
             this.groupBox5.TabIndex = 21;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Lado B";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "MAT n°";
-            // 
-            // txtMat
-            // 
-            this.txtMat.Location = new System.Drawing.Point(68, 153);
-            this.txtMat.Maximum = new decimal(new int[] {
-            150,
-            0,
-            0,
-            0});
-            this.txtMat.Name = "txtMat";
-            this.txtMat.Size = new System.Drawing.Size(126, 20);
-            this.txtMat.TabIndex = 20;
-            this.txtMat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 331);
+            this.ClientSize = new System.Drawing.Size(594, 601);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -272,19 +272,18 @@ namespace FixT
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(900, 370);
-            this.MinimumSize = new System.Drawing.Size(900, 370);
+            this.MaximumSize = new System.Drawing.Size(610, 640);
+            this.MinimumSize = new System.Drawing.Size(610, 640);
             this.Name = "Form1";
             this.Text = "Tournament Bracket v1.0.0";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtWeight)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMat)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtMat)).EndInit();
             this.ResumeLayout(false);
 
         }
