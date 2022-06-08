@@ -1,0 +1,35 @@
+C:\Users\freiS\source\repos\FixT\obj\Debug\FixT.csprojAssemblyReference.cache
+C:\Users\freiS\source\repos\FixT\obj\Debug\FixT.Form1.resources
+C:\Users\freiS\source\repos\FixT\obj\Debug\FixT.Properties.Resources.resources
+C:\Users\freiS\source\repos\FixT\obj\Debug\FixT.csproj.GenerateResource.cache
+C:\Users\freiS\source\repos\FixT\obj\Debug\FixT.csproj.CoreCompileInputs.cache
+C:\Users\freiS\source\repos\FixT\bin\Debug\FixT.exe.config
+C:\Users\freiS\source\repos\FixT\bin\Debug\FixT.exe
+C:\Users\freiS\source\repos\FixT\bin\Debug\FixT.pdb
+C:\Users\freiS\source\repos\FixT\bin\Debug\PdfSharp.Charting.dll
+C:\Users\freiS\source\repos\FixT\bin\Debug\PdfSharp.dll
+C:\Users\freiS\source\repos\FixT\bin\Debug\PdfSharp.xml
+C:\Users\freiS\source\repos\FixT\bin\Debug\PdfSharp.Charting.xml
+C:\Users\freiS\source\repos\FixT\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\freiS\source\repos\FixT\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\freiS\source\repos\FixT\obj\Debug\FixT.csproj.CopyComplete
+C:\Users\freiS\source\repos\FixT\obj\Debug\FixT.exe
+C:\Users\freiS\source\repos\FixT\obj\Debug\FixT.pdb
+E:\backup 4-13\source\repos\FixT\bin\Debug\PdfSharp.Charting.dll
+E:\backup 4-13\source\repos\FixT\bin\Debug\PdfSharp.dll
+E:\backup 4-13\source\repos\FixT\bin\Debug\PdfSharp.xml
+E:\backup 4-13\source\repos\FixT\bin\Debug\PdfSharp.Charting.xml
+E:\backup 4-13\source\repos\FixT\bin\Debug\de\PdfSharp.resources.dll
+E:\backup 4-13\source\repos\FixT\bin\Debug\de\PdfSharp.Charting.resources.dll
+E:\backup 4-13\source\repos\FixT\obj\Debug\FixT.csproj.AssemblyReference.cache
+E:\backup 4-13\source\repos\FixT\obj\Debug\FixT.csproj.SuggestedBindingRedirects.cache
+E:\backup 4-13\source\repos\FixT\obj\Debug\FixT.Form1.resources
+E:\backup 4-13\source\repos\FixT\obj\Debug\FixT.csproj.GenerateResource.cache
+E:\backup 4-13\source\repos\FixT\obj\Debug\FixT.csproj.CoreCompileInputs.cache
+E:\backup 4-13\source\repos\FixT\obj\Debug\FixT.csproj.CopyComplete
+E:\backup 4-13\source\repos\FixT\bin\Debug\TK.exe.config
+E:\backup 4-13\source\repos\FixT\bin\Debug\TK.exe
+E:\backup 4-13\source\repos\FixT\bin\Debug\TK.pdb
+E:\backup 4-13\source\repos\FixT\obj\Debug\TK.Properties.Resources.resources
+E:\backup 4-13\source\repos\FixT\obj\Debug\TK.exe
+E:\backup 4-13\source\repos\FixT\obj\Debug\TK.pdb
