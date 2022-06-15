@@ -30,7 +30,7 @@ namespace FixT
 
             for (int i = 0; i < range; i++)
             {
-                CompetitorsList[i] = new Competitor(data[i, 0], data[i, 1]);
+                CompetitorsList[i] = new Competitor(i, data[i, 0], data[i, 1]);
             }
         }
 

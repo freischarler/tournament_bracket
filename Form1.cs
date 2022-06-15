@@ -16,11 +16,13 @@ namespace FixT
 {
     public struct Competitor
     {
+        public int id;
         public string name;
         public string team;
 
-        public Competitor(string N, string T)
+        public Competitor(int I, string N, string T)
         {
+            id = I;
             name = N;
             team = T;
         }
@@ -186,6 +188,7 @@ namespace FixT
             XGraphics gfx = XGraphics.FromPdfPage(page);
             XFont font = new XFont("Times New Roman", 15, XFontStyle.Regular);
             XFont NameFont = new XFont("Times New Roman", 11, XFontStyle.Regular);
+            XFont NumberFont = new XFont("Arial", 8, XFontStyle.Regular);
             XFont EquipeFont = new XFont("Times New Roman", 7, XFontStyle.Regular);
 
             XFont T_font = new XFont("Times New Roman", 18, XFontStyle.Bold);
@@ -212,7 +215,7 @@ namespace FixT
             // Draw the text
             try
             {
-                gfx.DrawString("Cinturón: " + txtBelt.Text, t_font, XBrushes.Black,
+                gfx.DrawString("Cinturón: " + cBbelt.Text, t_font, XBrushes.Black,
                 new XRect(40, 50, page.Width, page.Height),
                 XStringFormats.TopLeft);
             }
@@ -223,12 +226,7 @@ namespace FixT
 
             try
             {
-                if (ckAbs.CheckState.ToString() == "Checked")
-                    gfx.DrawString("Categoría: " + "Absoluto", t_font, XBrushes.Black,
-                new XRect(240, 50, page.Width, page.Height),
-                XStringFormats.TopLeft);
-                else
-                    gfx.DrawString("Categoría: " + txtWeight.Text, t_font, XBrushes.Black,
+                gfx.DrawString("Categoría: " + cBcategoria.Text, t_font, XBrushes.Black,
                 new XRect(240, 50, page.Width, page.Height),
                 XStringFormats.TopLeft);
             }
@@ -400,7 +398,13 @@ namespace FixT
             {
                 XRect rect = new XRect(40, 22*i+(80), 120, 20);
                 gfx.DrawRectangle(XBrushes.SeaShell, rect);
-                //tf.Alignment = ParagraphAlignment.Left;
+
+                //number rect
+                XRect rectNumberBase = new XRect(20, 22 * i + (80), 20, 20);
+                gfx.DrawRectangle(XBrushes.Black, rectNumberBase);
+
+                XRect rectNumber = new XRect(25, 22 * i + (82), 15, 15);
+                gfx.DrawRectangle(XBrushes.Black, rectNumber);
 
                 XRect rectNameLabel = new XRect(42, 22 * i + (80), 118, 20);
                 gfx.DrawRectangle(XBrushes.SeaShell, rectNameLabel);
@@ -413,8 +417,12 @@ namespace FixT
 
                 try
                 {
-                    tf.DrawString(c.Aside[i].name.ToString(), NameFont, XBrushes.Black, rectNameLabel, XStringFormats.TopLeft);
-                    tf.DrawString(c.Aside[i].team.ToString(), EquipeFont, XBrushes.Black, rectEquipeLabel, XStringFormats.TopLeft);
+                    if (c.Aside[i].name != null)
+                    {
+                        tf.DrawString(c.Aside[i].id.ToString(), NumberFont, XBrushes.White, rectNumber, XStringFormats.TopLeft);
+                        tf.DrawString(c.Aside[i].name.ToString(), NameFont, XBrushes.Black, rectNameLabel, XStringFormats.TopLeft);
+                        tf.DrawString(c.Aside[i].team.ToString(), EquipeFont, XBrushes.Black, rectEquipeLabel, XStringFormats.TopLeft);
+                    }     
                 }
                 catch (Exception)
                 {
@@ -433,6 +441,13 @@ namespace FixT
                 gfx.DrawRectangle(XBrushes.SeaShell, rect);
                 //tf.Alignment = ParagraphAlignment.Left;
 
+                //number rect
+                XRect rectNumberBase = new XRect(20, 22 * i + (80), 20, 20);
+                gfx.DrawRectangle(XBrushes.Black, rectNumberBase);
+
+                XRect rectNumber = new XRect(25, 22 * i + (82), 15, 15);
+                gfx.DrawRectangle(XBrushes.Black, rectNumber);
+
                 XRect rectNameLabel = new XRect(42, 22 * i + (80), 118, 20);
                 gfx.DrawRectangle(XBrushes.SeaShell, rectNameLabel);
 
@@ -445,8 +460,12 @@ namespace FixT
 
                 try
                 {
-                    tf.DrawString(c.Bside[i-c.Bside.Length].name.ToString(), NameFont, XBrushes.Black, rectNameLabel, XStringFormats.TopLeft);
-                    tf.DrawString(c.Bside[i-c.Bside.Length].team.ToString(), EquipeFont, XBrushes.Black, rectEquipeLabel, XStringFormats.TopLeft);
+                    if(c.Bside[i - c.Bside.Length].name != null)
+                    {
+                        tf.DrawString(c.Bside[i - c.Bside.Length].id.ToString(), NumberFont, XBrushes.White, rectNumber, XStringFormats.TopLeft);
+                        tf.DrawString(c.Bside[i - c.Bside.Length].name.ToString(), NameFont, XBrushes.Black, rectNameLabel, XStringFormats.TopLeft);
+                        tf.DrawString(c.Bside[i - c.Bside.Length].team.ToString(), EquipeFont, XBrushes.Black, rectEquipeLabel, XStringFormats.TopLeft);
+                    }
                 }
                 catch (Exception)
                 {
@@ -491,7 +510,7 @@ namespace FixT
             {
                 // Save the document...
                 string date = DateTime.Now.ToString("dd-MM-yyyy hh-mm-ss");  
-                string filename = txtBelt.Text +" "+txtWeight.Text +" "+ date + ".pdf";
+                string filename = cBbelt.Text +" "+ cBcategoria.Text + " "+ date + ".pdf";
                 Console.WriteLine(filename);    
                 document.Save(filename);
                 // ...and start a viewer.
@@ -508,16 +527,6 @@ namespace FixT
             XRect r = new XRect(x, y, 80, 20);
             gfx.DrawRectangle(XBrushes.SeaShell, r);
             tf.DrawString("", font, XBrushes.Black, r, XStringFormats.TopLeft);
-        }
-
-        private void ckAbs_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckAbs.CheckState.ToString() == "Checked")
-            {
-                txtWeight.Enabled = false;
-            }
-            else
-                txtWeight.Enabled = true;
         }
 
         /*public Competitor[] AddList(string[,] data)

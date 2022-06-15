@@ -38,19 +38,16 @@ namespace FixT
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTournament = new System.Windows.Forms.TextBox();
-            this.txtBelt = new System.Windows.Forms.TextBox();
             this.btnPDF = new System.Windows.Forms.Button();
-            this.txtWeight = new System.Windows.Forms.NumericUpDown();
-            this.ckAbs = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtMat = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWeight)).BeginInit();
+            this.cBcategoria = new System.Windows.Forms.ComboBox();
+            this.cBbelt = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMat)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -64,15 +61,15 @@ namespace FixT
             this.Aside.FormattingEnabled = true;
             this.Aside.Location = new System.Drawing.Point(6, 19);
             this.Aside.Name = "Aside";
-            this.Aside.Size = new System.Drawing.Size(275, 251);
+            this.Aside.Size = new System.Drawing.Size(261, 251);
             this.Aside.TabIndex = 1;
             // 
             // Bside
             // 
             this.Bside.FormattingEnabled = true;
-            this.Bside.Location = new System.Drawing.Point(6, 16);
+            this.Bside.Location = new System.Drawing.Point(9, 19);
             this.Bside.Name = "Bside";
-            this.Bside.Size = new System.Drawing.Size(261, 251);
+            this.Bside.Size = new System.Drawing.Size(270, 251);
             this.Bside.TabIndex = 2;
             // 
             // cList
@@ -85,9 +82,9 @@ namespace FixT
             // 
             // Run
             // 
-            this.Run.Location = new System.Drawing.Point(13, 19);
+            this.Run.Location = new System.Drawing.Point(57, 19);
             this.Run.Name = "Run";
-            this.Run.Size = new System.Drawing.Size(90, 39);
+            this.Run.Size = new System.Drawing.Size(95, 39);
             this.Run.TabIndex = 5;
             this.Run.Text = "Generar llave";
             this.Run.UseVisualStyleBackColor = true;
@@ -114,7 +111,7 @@ namespace FixT
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 122);
+            this.label3.Location = new System.Drawing.Point(10, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 10;
@@ -128,69 +125,36 @@ namespace FixT
             this.txtTournament.TabIndex = 11;
             this.txtTournament.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtBelt
-            // 
-            this.txtBelt.Location = new System.Drawing.Point(68, 119);
-            this.txtBelt.Name = "txtBelt";
-            this.txtBelt.Size = new System.Drawing.Size(126, 20);
-            this.txtBelt.TabIndex = 13;
-            // 
             // btnPDF
             // 
-            this.btnPDF.Location = new System.Drawing.Point(115, 18);
+            this.btnPDF.Location = new System.Drawing.Point(57, 64);
             this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(79, 40);
+            this.btnPDF.Size = new System.Drawing.Size(95, 39);
             this.btnPDF.TabIndex = 14;
-            this.btnPDF.Text = "PDF";
+            this.btnPDF.Text = "Generar PDF";
             this.btnPDF.UseVisualStyleBackColor = true;
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
-            // txtWeight
-            // 
-            this.txtWeight.Location = new System.Drawing.Point(68, 59);
-            this.txtWeight.Maximum = new decimal(new int[] {
-            150,
-            0,
-            0,
-            0});
-            this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(89, 20);
-            this.txtWeight.TabIndex = 15;
-            this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // ckAbs
-            // 
-            this.ckAbs.AutoSize = true;
-            this.ckAbs.Location = new System.Drawing.Point(68, 89);
-            this.ckAbs.Name = "ckAbs";
-            this.ckAbs.Size = new System.Drawing.Size(67, 17);
-            this.ckAbs.TabIndex = 16;
-            this.ckAbs.Text = "Absoluto";
-            this.ckAbs.UseVisualStyleBackColor = true;
-            this.ckAbs.CheckedChanged += new System.EventHandler(this.ckAbs_CheckedChanged);
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cBbelt);
+            this.groupBox1.Controls.Add(this.cBcategoria);
             this.groupBox1.Controls.Add(this.txtMat);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.ckAbs);
             this.groupBox1.Controls.Add(this.txtTournament);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtBelt);
-            this.groupBox1.Controls.Add(this.txtWeight);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(209, 211);
+            this.groupBox1.Size = new System.Drawing.Size(209, 162);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del torneo";
             // 
             // txtMat
             // 
-            this.txtMat.Location = new System.Drawing.Point(68, 153);
+            this.txtMat.Location = new System.Drawing.Point(68, 126);
             this.txtMat.Maximum = new decimal(new int[] {
             150,
             0,
@@ -204,20 +168,11 @@ namespace FixT
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 160);
+            this.label5.Location = new System.Drawing.Point(10, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 19;
             this.label5.Text = "MAT n°";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(163, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "[Kg]";
             // 
             // groupBox2
             // 
@@ -233,9 +188,9 @@ namespace FixT
             // 
             this.groupBox3.Controls.Add(this.Run);
             this.groupBox3.Controls.Add(this.btnPDF);
-            this.groupBox3.Location = new System.Drawing.Point(12, 229);
+            this.groupBox3.Location = new System.Drawing.Point(12, 180);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(209, 65);
+            this.groupBox3.Size = new System.Drawing.Size(209, 114);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Controles";
@@ -245,7 +200,7 @@ namespace FixT
             this.groupBox4.Controls.Add(this.Aside);
             this.groupBox4.Location = new System.Drawing.Point(12, 300);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(287, 282);
+            this.groupBox4.Size = new System.Drawing.Size(275, 282);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Lado A";
@@ -253,12 +208,49 @@ namespace FixT
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.Bside);
-            this.groupBox5.Location = new System.Drawing.Point(305, 300);
+            this.groupBox5.Location = new System.Drawing.Point(293, 300);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(276, 282);
+            this.groupBox5.Size = new System.Drawing.Size(288, 282);
             this.groupBox5.TabIndex = 21;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Lado B";
+            // 
+            // cBcategoria
+            // 
+            this.cBcategoria.FormattingEnabled = true;
+            this.cBcategoria.Items.AddRange(new object[] {
+            "Galo",
+            "Pluma",
+            "Pena",
+            "Leve",
+            "Medio",
+            "Medio pesado",
+            "Pesado ",
+            "Super pesado",
+            "Ultra pesado",
+            "Absoluto"});
+            this.cBcategoria.Location = new System.Drawing.Point(68, 53);
+            this.cBcategoria.Name = "cBcategoria";
+            this.cBcategoria.Size = new System.Drawing.Size(126, 21);
+            this.cBcategoria.TabIndex = 21;
+            // 
+            // cBbelt
+            // 
+            this.cBbelt.FormattingEnabled = true;
+            this.cBbelt.Items.AddRange(new object[] {
+            "Blanco",
+            "Gris",
+            "Amarillo",
+            "Naranja",
+            "Verde",
+            "Azul",
+            "Violeta",
+            "Marron",
+            "Negro"});
+            this.cBbelt.Location = new System.Drawing.Point(68, 87);
+            this.cBbelt.Name = "cBbelt";
+            this.cBbelt.Size = new System.Drawing.Size(126, 21);
+            this.cBbelt.TabIndex = 22;
             // 
             // Form1
             // 
@@ -276,7 +268,6 @@ namespace FixT
             this.MinimumSize = new System.Drawing.Size(610, 640);
             this.Name = "Form1";
             this.Text = "Tournament Bracket v1.0.0";
-            ((System.ComponentModel.ISupportInitialize)(this.txtWeight)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMat)).EndInit();
@@ -297,18 +288,16 @@ namespace FixT
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTournament;
-        private System.Windows.Forms.TextBox txtBelt;
         private System.Windows.Forms.Button btnPDF;
-        private System.Windows.Forms.NumericUpDown txtWeight;
-        private System.Windows.Forms.CheckBox ckAbs;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.NumericUpDown txtMat;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cBcategoria;
+        private System.Windows.Forms.ComboBox cBbelt;
     }
 }
 
