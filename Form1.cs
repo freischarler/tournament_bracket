@@ -403,7 +403,7 @@ namespace FixT
                 XRect rectNumberBase = new XRect(20, 22 * i + (80), 20, 20);
                 gfx.DrawRectangle(XBrushes.Black, rectNumberBase);
 
-                XRect rectNumber = new XRect(25, 22 * i + (82), 15, 15);
+                XRect rectNumber = new XRect(25, 22 * i + (84), 15, 15);
                 gfx.DrawRectangle(XBrushes.Black, rectNumber);
 
                 XRect rectNameLabel = new XRect(42, 22 * i + (80), 118, 20);
@@ -445,7 +445,7 @@ namespace FixT
                 XRect rectNumberBase = new XRect(20, 22 * i + (80), 20, 20);
                 gfx.DrawRectangle(XBrushes.Black, rectNumberBase);
 
-                XRect rectNumber = new XRect(25, 22 * i + (82), 15, 15);
+                XRect rectNumber = new XRect(25, 22 * i + (84), 15, 15);
                 gfx.DrawRectangle(XBrushes.Black, rectNumber);
 
                 XRect rectNameLabel = new XRect(42, 22 * i + (80), 118, 20);
